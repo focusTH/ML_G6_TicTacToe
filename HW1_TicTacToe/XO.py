@@ -12,7 +12,20 @@ if value == "1":
     ans[0] = "X" #focus
 elif value == "2":
     ans[1] = "X" #focus
-
+elif value == "3":
+    ans[2] = "X" #focus
+elif value == "4":
+    ans[3] = "X"  # focus
+elif value == "5":
+    ans[4] = "X"  # focus
+elif value == "6":
+    ans[5] = "X"  # focus
+elif value == "7":
+    ans[6] = "X"  # focus
+elif value == "8":
+    ans[7] = "X"  # focus
+elif value == "9":
+    ans[8] = "X"  # focus
 
 
 print(ans[0],ans[1],ans[2]) #game
