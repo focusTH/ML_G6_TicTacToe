@@ -31,3 +31,20 @@ elif value == "9":
 print(ans[0],ans[1],ans[2]) #game
 print(ans[3],ans[4],ans[5]) #focus
 print(ans[6],ans[7],ans[8]) #focus
+
+if ans[0]==ans[1]==ans[2]:
+    print('win')
+elif ans[3] == ans[4] == ans[5]:
+    print('win')
+elif ans[6] == ans[7] == ans[8]:
+    print('win')
+elif ans[0] == ans[3] == ans[6]:
+    print('win')
+elif ans[1] == ans[4] == ans[7]:
+    print('win')
+elif ans[2] == ans[5] == ans[8]:
+    print('win')
+elif ans[0] == ans[4] == ans[8]:
+    print('win')
+elif ans[2] == ans[4] == ans[6]:
+    print('win')
