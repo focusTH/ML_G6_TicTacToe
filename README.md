@@ -1,2 +1,2 @@
-# ML_G6_TicTacToe
-Machine Learning Group6 Tic-Tac-Toe
+# ML_G6_Term3.2
+Machine Learning Group6
