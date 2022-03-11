@@ -256,32 +256,8 @@ def botMove():  # FOCUS ,game
 
 def win():
     won = False  # O
-    if 'O' == ans[0] == ans[1] == ans[2]:  # Liw , focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[3] == ans[4] == ans[5]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[6] == ans[7] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[0] == ans[3] == ans[6]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[1] == ans[4] == ans[7]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[2] == ans[5] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[0] == ans[4] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
-    elif 'O' == ans[2] == ans[4] == ans[6]:  # Liw, focus
-        print('Bot Win')# Liw , focus
-        won = True  # O
 
-    elif 'X' == ans[0] == ans[1] == ans[2]:  # focus
+    if 'X' == ans[0] == ans[1] == ans[2]:  # focus # bun
         print('Player Win')# focus
         won = True  # O
     elif 'X' == ans[3] == ans[4] == ans[5]:  # focus
@@ -304,6 +280,31 @@ def win():
         won = True  # O
     elif 'X' == ans[2] == ans[4] == ans[6]:  # focus
         print('Player Win')# focus
+        won = True  # O
+
+    elif 'O' == ans[0] == ans[1] == ans[2]:  # Liw , focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[3] == ans[4] == ans[5]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[6] == ans[7] == ans[8]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[0] == ans[3] == ans[6]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[1] == ans[4] == ans[7]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[2] == ans[5] == ans[8]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[0] == ans[4] == ans[8]:  # Liw, focus
+        print('Bot Win')# Liw , focus
+        won = True  # O
+    elif 'O' == ans[2] == ans[4] == ans[6]:  # Liw, focus
+        print('Bot Win')# Liw , focus
         won = True  # O
 
     elif ans[0] != 1 and ans[1] != 2 and ans[2] != 3 and ans[3] != 4 and ans[4] != 5 and ans[5] != 6 and ans[6] != 7 and ans[7] != 8 and ans[8] != 9:  # focus
