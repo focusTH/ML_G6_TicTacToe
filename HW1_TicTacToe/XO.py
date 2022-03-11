@@ -1,10 +1,12 @@
-import random as ran
-
+import random
+# W0 = random.randint(-100,100)
+# W1 = random.randint(-100,100)
 ans = [1, 2, 3, 4, 'O', 6, 7, 8, 9]
-
-print(ans[0], ans[1], ans[2])  # game
-print(ans[3], ans[4], ans[5])  # focus
-print(ans[6], ans[7], ans[8])  # focus
+print(' **************************** GAME START ****************************')  # game
+def table(): # game focus
+    print('                          [',ans[0],']','[',ans[1],']','[',ans[2],']',)  # game
+    print('                          [',ans[3],']','[',ans[4],']','[',ans[5],']',)  # focus
+    print('                          [',ans[6],']','[',ans[7],']','[',ans[8],']',)   # focus
 
 def humanMove(value): #focus
 
@@ -27,9 +29,6 @@ def humanMove(value): #focus
     elif value == "9":
         ans[8] = "X"  # focus
 
-    print(ans[0], ans[1], ans[2])  # game
-    print(ans[3], ans[4], ans[5])  # focus
-    print(ans[6], ans[7], ans[8])  # focus
 
     return ans
 
@@ -249,67 +248,66 @@ def botMove():  # FOCUS ,game
     elif value == 9:
         ans[8] = "O"  # focus
 
-    print(ans[0], ans[1], ans[2])  # focus
-    print(ans[3], ans[4], ans[5])  # focus
-    print(ans[6], ans[7], ans[8])  # focus
 
 
 def win():
     won = False  # O
 
     if 'X' == ans[0] == ans[1] == ans[2]:  # focus # bun
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[3] == ans[4] == ans[5]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[6] == ans[7] == ans[8]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[0] == ans[3] == ans[6]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[1] == ans[4] == ans[7]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[2] == ans[5] == ans[8]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[0] == ans[4] == ans[8]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
     elif 'X' == ans[2] == ans[4] == ans[6]:  # focus
-        print('Player Win')# focus
+        print('****************************Player Win****************************')# focus
         won = True  # O
 
     elif 'O' == ans[0] == ans[1] == ans[2]:  # Liw , focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[3] == ans[4] == ans[5]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[6] == ans[7] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[0] == ans[3] == ans[6]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[1] == ans[4] == ans[7]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[2] == ans[5] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[0] == ans[4] == ans[8]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
     elif 'O' == ans[2] == ans[4] == ans[6]:  # Liw, focus
-        print('Bot Win')# Liw , focus
+        print('****************************Bot Win****************************')# Liw , focus
         won = True  # O
 
     elif ans[0] != 1 and ans[1] != 2 and ans[2] != 3 and ans[3] != 4 and ans[4] != 5 and ans[5] != 6 and ans[6] != 7 and ans[7] != 8 and ans[8] != 9:  # focus
-        print('Game Draw') # focus
+        print('****************************Game Draw****************************') # focus
         won = True
+    if won == True :
+        table()
 
     return won  # O
 
@@ -318,8 +316,9 @@ def space_exist():
 
 i = 1
 while space_exist():
+    table()  # game
+    # print('round :',i) # focus
 
-    print('round : ',i) # focus
     value = input("Please enter a number : ")  # bun
     value = humanMove(value)  # O
     botMove() # focus
