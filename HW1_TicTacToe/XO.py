@@ -1,7 +1,7 @@
 import random
 # W0 = random.randint(-100,100)
 # W1 = random.randint(-100,100)
-ans = [1, 2, 3, 4, 'O', 6, 7, 8, 9]
+ans = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(' **************************** GAME START ****************************')  # game
 def table(): # game focus
     print('                          [',ans[0],']','[',ans[1],']','[',ans[2],']',)  # game
@@ -34,195 +34,307 @@ def humanMove(value): #focus
 
 def botMove():  # FOCUS ,game
 
-    Vs = 1000
+    Vs = -1000
     Vb = 0
     value = 0
 
     if ans[0]== 1:
         A = 0
         B = 0
-        if ans[1]==2 :
-            A=A+1
-        if ans[3]==4 :
-            A=A+1
-        if ans[1]!='X' :
-            B=B+1
-        if ans[3]!='X' :
-            B=B+1
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb1 : ', Vb)
+        C = 0
 
-        if Vb < Vs:
+        #cheak A
+        if ans[1] == 'X':
+            A=A+1
+        if ans[3] == 'X':
+            A=A+1
+        if ans[4] == 'X' :
+            A=A+1
+        #cheak B
+        if ans[1] == 'O':
+            B = B + 1
+        if ans[2]== 'O':
+            B = B + 1
+        if ans[3]== 'O':
+            B = B + 1
+        if ans[6]== 'O':
+            B = B + 1
+        # cheak C
+        C = C+1
+
+        Vb = A+B+C
+
+        if Vb > Vs:
             Vs = Vb
             value = 1
 
     if ans[1] == 2:
         A = 0
         B = 0
-        if ans[0] == 1:
+        C = 0
+        # cheak A
+        if ans[0] == 'X':
             A = A + 1
-        if ans[4] == 5:
+        if ans[2] == 'X':
             A = A + 1
-        if ans[2] == 3:
+        if ans[3] == 'X':
             A = A + 1
-        if ans[0] != 'X':
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[5] == 'X':
+            A = A + 1
+        # cheak B
+        if ans[0]== 'O':
             B = B + 1
-        if ans[4] != 'X':
+        if ans[2]== 'O':
             B = B + 1
-        if ans[2] != 'X':
+        if ans[4]== 'O':
             B = B + 1
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb2 : ', Vb)
+        if ans[7]== 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        if Vb < Vs :
-            Vs=Vb
+        Vb = A + B + C
+
+        if Vb > Vs:
+            Vs = Vb
             value = 2
 
     if ans[2] == 3:
         A = 0
         B = 0
-        if ans[1] == 2:
+        C = 0
+        # cheak A
+        if ans[1] == 'X':
             A = A + 1
-        if ans[5] == 6:
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[5] == 'X':
             A = A + 1
 
-        if ans[1] != 'X':
+        # cheak B
+        if ans[0] == 'O':
             B = B + 1
-        if ans[5] != 'X':
+        if ans[1] == 'O':
             B = B + 1
+        if ans[5] == 'O':
+            B = B + 1
+        if ans[8] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb3 : ', Vb)
+        Vb = A + B + C
 
-        if Vb < Vs :
-            Vs=Vb
+        if Vb > Vs:
+            Vs = Vb
             value = 3
 
     if ans[3] == 4:
         A = 0
         B = 0
-        if ans[0] == 1:
+        C = 0
+        # cheak A
+        if ans[0] == 'X':
             A = A + 1
-        if ans[4] == 5:
+        if ans[1] == 'X':
             A = A + 1
-        if ans[6] == 7:
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[6] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
             A = A + 1
 
-        if ans[0] != 'X':
+        # cheak B
+        if ans[0] == 'O':
             B = B + 1
-        if ans[4] != 'X':
+        if ans[4] == 'O':
             B = B + 1
-        if ans[6] != 'X':
+        if ans[5] == 'O':
             B = B + 1
+        if ans[6] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb4 : ', Vb)
+        Vb = A + B + C
 
-        if Vb < Vs :
-            Vs=Vb
+        if Vb > Vs:
+            Vs = Vb
             value = 4
+
+    if ans[4] == 5:
+        A = 0
+        B = 0
+        C = 0
+        # cheak A
+        if ans[0] == 'X':
+            A = A + 1
+        if ans[1] == 'X':
+            A = A + 1
+        if ans[2] == 'X':
+            A = A + 1
+        if ans[3] == 'X':
+            A = A + 1
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[5] == 'X':
+            A = A + 1
+        if ans[6] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
+            A = A + 1
+        if ans[8] == 'X':
+            A = A + 1
+
+        # cheak B
+        if ans[1] == 'O':
+            B = B + 1
+        if ans[3] == 'O':
+            B = B + 1
+        if ans[5] == 'O':
+            B = B + 1
+        if ans[7] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 2
+
+        Vb = A + B + C
+
+        if Vb > Vs:
+            Vs = Vb
+            value = 5
 
     if ans[5] == 6:
         A = 0
         B = 0
-        if ans[2] == 3:
+        C = 0
+        # cheak A
+        if ans[1] == 'X':
             A = A + 1
-        if ans[4] == 5:
+        if ans[2] == 'X':
             A = A + 1
-        if ans[8] == 9:
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
+            A = A + 1
+        if ans[8] == 'X':
             A = A + 1
 
-        if ans[2] != 'X':
-            B = B + 1
-        if ans[4] != 'X':
-            B = B + 1
-        if ans[8] != 'X':
-            B = B + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb6 : ', Vb)
+        # cheak B
+        if ans[2] == 'O':
+            B = B + 1
+        if ans[3] == 'O':
+            B = B + 1
+        if ans[4] == 'O':
+            B = B + 1
+        if ans[8] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        if Vb < Vs:
+        Vb = A + B + C
+
+        if Vb > Vs:
             Vs = Vb
             value = 6
-
     if ans[6] == 7:
         A = 0
         B = 0
-        if ans[3] == 4:
+        C = 0
+        # cheak A
+        if ans[3] == 'X':
             A = A + 1
-        if ans[7] == 8:
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
             A = A + 1
 
-        if ans[3] != 'X':
-            B = B + 1
-        if ans[7] != 'X':
-            B = B + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb7 : ', Vb)
 
-        if Vb < Vs:
+        # cheak B
+        if ans[0] == 'O':
+            B = B + 1
+        if ans[3] == 'O':
+            B = B + 1
+        if ans[7] == 'O':
+            B = B + 1
+        if ans[8] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
+
+        Vb = A + B + C
+
+        if Vb > Vs:
             Vs = Vb
             value = 7
-
     if ans[7] == 8:
         A = 0
         B = 0
-        if ans[4] == 5:
+        C = 0
+        # cheak A
+        if ans[3] == 'X':
             A = A + 1
-        if ans[6] == 7:
+        if ans[4] == 'X':
             A = A + 1
-        if ans[8] == 9:
+        if ans[5] == 'X':
+            A = A + 1
+        if ans[6] == 'X':
+            A = A + 1
+        if ans[8] == 'X':
             A = A + 1
 
-        if ans[4] != 'X':
-            B = B + 1
-        if ans[6] != 'X':
-            B = B + 1
-        if ans[8] != 'X':
-            B = B + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb8 : ', Vb)
+        # cheak B
+        if ans[1] == 'O':
+            B = B + 1
+        if ans[4] == 'O':
+            B = B + 1
+        if ans[6] == 'O':
+            B = B + 1
+        if ans[8] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        if Vb < Vs:
+        Vb = A + B + C
+
+        if Vb > Vs:
             Vs = Vb
             value = 8
 
     if ans[8] == 9:
         A = 0
         B = 0
-        if ans[5] == 6:
+        C = 0
+        # cheak A
+        if ans[4] == 'X':
             A = A + 1
-        if ans[7] == 8:
+        if ans[5] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
             A = A + 1
 
-        if ans[5] != 'X':
-            B = B + 1
-        if ans[7] != 'X':
-            B = B + 1
 
-        # print('A : ', A)
-        # print('B : ', B)
-        Vb = A + B
-        print('Vb9 : ', Vb)
+        # cheak B
+        if ans[2] == 'O':
+            B = B + 1
+        if ans[5] == 'O':
+            B = B + 1
+        if ans[6] == 'O':
+            B = B + 1
+        if ans[7] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 1
 
-        if Vb < Vs:
+        Vb = A + B + C
+
+        if Vb > Vs:
             Vs = Vb
             value = 9
 
@@ -316,9 +428,10 @@ def space_exist():
 
 i = 1
 while space_exist():
-    table()  # game
-    # print('round :',i) # focus
 
+    # print('round :',i) # focus
+    botMove()# focus
+    table()
     value = input("Please enter a number : ")  # bun
     if int(value) >=10:# bun
         print('------Try again------')# bun
@@ -327,7 +440,7 @@ while space_exist():
         print('------Try again------')# bun
         continue# bun
     value = humanMove(value)  # O
-    botMove() # focus
+
     i = i+1
     won = win()  # O
 
