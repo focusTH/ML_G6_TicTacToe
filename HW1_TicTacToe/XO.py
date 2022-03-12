@@ -320,6 +320,12 @@ while space_exist():
     # print('round :',i) # focus
 
     value = input("Please enter a number : ")  # bun
+    if int(value) >=10:# bun
+        print('------Try again------')# bun
+        continue# bun
+    elif int(value) == 0:# bun
+        print('------Try again------')# bun
+        continue# bun
     value = humanMove(value)  # O
     botMove() # focus
     i = i+1
