@@ -31,6 +31,29 @@ def humanMove(value): #focus
 
     return ans
 
+def humanMove(value): #focus
+
+    if value == "1":
+        ans[0] = "X"  # focus
+    elif value == "2":
+        ans[1] = "X"  # focus
+    elif value == "3":
+        ans[2] = "X"  # focus
+    elif value == "4":
+        ans[3] = "X"  # focus
+    elif value == "5":
+        ans[4] = "X"  # focus
+    elif value == "6":
+        ans[5] = "X"  # focus
+    elif value == "7":
+        ans[6] = "X"  # focus
+    elif value == "8":
+        ans[7] = "X"  # focus
+    elif value == "9":
+        ans[8] = "X"  # focus
+
+    return ans
+
 def botMove():  # FOCUS ,game
 
     Vs = -1000
@@ -57,14 +80,19 @@ def botMove():  # FOCUS ,game
             B = B + 1
         if ans[6]== 'O':
             B = B + 1
+        if ans[4]== 'O':
+            B = B + 1
+        if ans[8]== 'O':
+            B = B + 1
         # cheak C
         C = C+1
 
-        Vb = A+B+C
-
+        Vb = A+2*B+C
+        print('ans[0] Vb =',Vb)
         if Vb > Vs:
             Vs = Vb
             value = 1
+
 
     if ans[1] == 2:
         A = 0
@@ -93,8 +121,8 @@ def botMove():  # FOCUS ,game
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[1] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 2
@@ -120,11 +148,15 @@ def botMove():  # FOCUS ,game
             B = B + 1
         if ans[8] == 'O':
             B = B + 1
+        if ans[4]== 'O':
+            B = B + 1
+        if ans[6]== 'O':
+            B = B + 1
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[2] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 3
@@ -157,53 +189,53 @@ def botMove():  # FOCUS ,game
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[3] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 4
 
-    # if ans[4] == 5:
-    #     A = 0
-    #     B = 0
-    #     C = 0
-    #     # cheak A
-    #     if ans[0] == 'X':
-    #         A = A + 1
-    #     if ans[1] == 'X':
-    #         A = A + 1
-    #     if ans[2] == 'X':
-    #         A = A + 1
-    #     if ans[3] == 'X':
-    #         A = A + 1
-    #     if ans[4] == 'X':
-    #         A = A + 1
-    #     if ans[5] == 'X':
-    #         A = A + 1
-    #     if ans[6] == 'X':
-    #         A = A + 1
-    #     if ans[7] == 'X':
-    #         A = A + 1
-    #     if ans[8] == 'X':
-    #         A = A + 1
-    #
-    #     # cheak B
-    #     if ans[1] == 'O':
-    #         B = B + 1
-    #     if ans[3] == 'O':
-    #         B = B + 1
-    #     if ans[5] == 'O':
-    #         B = B + 1
-    #     if ans[7] == 'O':
-    #         B = B + 1
-    #     # cheak C
-    #     C = C + 2
-    #
-    #     Vb = A + B + C
-    #
-    #     if Vb > Vs:
-    #         Vs = Vb
-    #         value = 5
+    if ans[4] == 5:
+        A = 0
+        B = 0
+        C = 0
+        # cheak A
+        if ans[0] == 'X':
+            A = A + 1
+        if ans[1] == 'X':
+            A = A + 1
+        if ans[2] == 'X':
+            A = A + 1
+        if ans[3] == 'X':
+            A = A + 1
+        if ans[4] == 'X':
+            A = A + 1
+        if ans[5] == 'X':
+            A = A + 1
+        if ans[6] == 'X':
+            A = A + 1
+        if ans[7] == 'X':
+            A = A + 1
+        if ans[8] == 'X':
+            A = A + 1
+
+        # cheak B
+        if ans[1] == 'O':
+            B = B + 1
+        if ans[3] == 'O':
+            B = B + 1
+        if ans[5] == 'O':
+            B = B + 1
+        if ans[7] == 'O':
+            B = B + 1
+        # cheak C
+        C = C + 2
+
+        Vb = A + 2*B + C
+        print('ans[4] Vb =', Vb)
+        if Vb > Vs:
+            Vs = Vb
+            value = 5
 
     if ans[5] == 6:
         A = 0
@@ -233,8 +265,8 @@ def botMove():  # FOCUS ,game
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[5] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 6
@@ -260,11 +292,15 @@ def botMove():  # FOCUS ,game
             B = B + 1
         if ans[8] == 'O':
             B = B + 1
+        if ans[2]== 'O':
+            B = B + 1
+        if ans[4]== 'O':
+            B = B + 1
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[6] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 7
@@ -297,8 +333,8 @@ def botMove():  # FOCUS ,game
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[7] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 8
@@ -324,36 +360,49 @@ def botMove():  # FOCUS ,game
             B = B + 1
         if ans[7] == 'O':
             B = B + 1
+        if ans[0]== 'O':
+            B = B + 1
+        if ans[4]== 'O':
+            B = B + 1
         # cheak C
         C = C + 1
 
-        Vb = A + B + C
-
+        Vb = A + 2*B + C
+        print('ans[8] Vb =', Vb)
         if Vb > Vs:
             Vs = Vb
             value = 9
 
-    print('Vs : ', Vs)
-    print('Value : ', value)
+
 
     if value == 1:
         ans[0] = "O"  # focus
+        print('choose ans[0]')
     elif value == 2:
         ans[1] = "O"  # focus
+        print('choose ans[1]')
     elif value == 3:
         ans[2] = "O"  # focus
+        print('choose ans[2]')
     elif value == 4:
         ans[3] = "O"  # focus
+        print('choose ans[3]')
     elif value == 5:
         ans[4] = "O"  # focus
+        print('choose ans[4]')
     elif value == 6:
         ans[5] = "O"  # focus
+        print('choose ans[5]')
     elif value == 7:
         ans[6] = "O"  # focus
+        print('choose ans[6]')
     elif value == 8:
         ans[7] = "O"  # focus
+        print('choose ans[7]')
     elif value == 9:
         ans[8] = "O"  # focus
+        print('choose ans[8]')
+
 
 def win():
     won = False  # O
