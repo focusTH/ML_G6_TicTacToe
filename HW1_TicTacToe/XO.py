@@ -1,7 +1,7 @@
 import random
 # W0 = random.randint(-100,100)
 # W1 = random.randint(-100,100)
-ans = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ans = [1, 2, 3, 4, 'O', 6, 7, 8, 9]
 print(' **************************** GAME START ****************************')  # game
 def table(): # game focus
     print('                          [',ans[0],']','[',ans[1],']','[',ans[2],']',)  # game
@@ -29,7 +29,6 @@ def humanMove(value): #focus
     elif value == "9":
         ans[8] = "X"  # focus
 
-
     return ans
 
 def botMove():  # FOCUS ,game
@@ -42,7 +41,6 @@ def botMove():  # FOCUS ,game
         A = 0
         B = 0
         C = 0
-
         #cheak A
         if ans[1] == 'X':
             A=A+1
@@ -165,47 +163,47 @@ def botMove():  # FOCUS ,game
             Vs = Vb
             value = 4
 
-    if ans[4] == 5:
-        A = 0
-        B = 0
-        C = 0
-        # cheak A
-        if ans[0] == 'X':
-            A = A + 1
-        if ans[1] == 'X':
-            A = A + 1
-        if ans[2] == 'X':
-            A = A + 1
-        if ans[3] == 'X':
-            A = A + 1
-        if ans[4] == 'X':
-            A = A + 1
-        if ans[5] == 'X':
-            A = A + 1
-        if ans[6] == 'X':
-            A = A + 1
-        if ans[7] == 'X':
-            A = A + 1
-        if ans[8] == 'X':
-            A = A + 1
-
-        # cheak B
-        if ans[1] == 'O':
-            B = B + 1
-        if ans[3] == 'O':
-            B = B + 1
-        if ans[5] == 'O':
-            B = B + 1
-        if ans[7] == 'O':
-            B = B + 1
-        # cheak C
-        C = C + 2
-
-        Vb = A + B + C
-
-        if Vb > Vs:
-            Vs = Vb
-            value = 5
+    # if ans[4] == 5:
+    #     A = 0
+    #     B = 0
+    #     C = 0
+    #     # cheak A
+    #     if ans[0] == 'X':
+    #         A = A + 1
+    #     if ans[1] == 'X':
+    #         A = A + 1
+    #     if ans[2] == 'X':
+    #         A = A + 1
+    #     if ans[3] == 'X':
+    #         A = A + 1
+    #     if ans[4] == 'X':
+    #         A = A + 1
+    #     if ans[5] == 'X':
+    #         A = A + 1
+    #     if ans[6] == 'X':
+    #         A = A + 1
+    #     if ans[7] == 'X':
+    #         A = A + 1
+    #     if ans[8] == 'X':
+    #         A = A + 1
+    #
+    #     # cheak B
+    #     if ans[1] == 'O':
+    #         B = B + 1
+    #     if ans[3] == 'O':
+    #         B = B + 1
+    #     if ans[5] == 'O':
+    #         B = B + 1
+    #     if ans[7] == 'O':
+    #         B = B + 1
+    #     # cheak C
+    #     C = C + 2
+    #
+    #     Vb = A + B + C
+    #
+    #     if Vb > Vs:
+    #         Vs = Vb
+    #         value = 5
 
     if ans[5] == 6:
         A = 0
@@ -222,7 +220,6 @@ def botMove():  # FOCUS ,game
             A = A + 1
         if ans[8] == 'X':
             A = A + 1
-
 
         # cheak B
         if ans[2] == 'O':
@@ -241,6 +238,7 @@ def botMove():  # FOCUS ,game
         if Vb > Vs:
             Vs = Vb
             value = 6
+
     if ans[6] == 7:
         A = 0
         B = 0
@@ -252,8 +250,6 @@ def botMove():  # FOCUS ,game
             A = A + 1
         if ans[7] == 'X':
             A = A + 1
-
-
 
         # cheak B
         if ans[0] == 'O':
@@ -272,6 +268,7 @@ def botMove():  # FOCUS ,game
         if Vb > Vs:
             Vs = Vb
             value = 7
+
     if ans[7] == 8:
         A = 0
         B = 0
@@ -287,7 +284,6 @@ def botMove():  # FOCUS ,game
             A = A + 1
         if ans[8] == 'X':
             A = A + 1
-
 
         # cheak B
         if ans[1] == 'O':
@@ -318,7 +314,6 @@ def botMove():  # FOCUS ,game
             A = A + 1
         if ans[7] == 'X':
             A = A + 1
-
 
         # cheak B
         if ans[2] == 'O':
@@ -359,8 +354,6 @@ def botMove():  # FOCUS ,game
         ans[7] = "O"  # focus
     elif value == 9:
         ans[8] = "O"  # focus
-
-
 
 def win():
     won = False  # O
@@ -416,33 +409,39 @@ def win():
         won = True  # O
 
     elif ans[0] != 1 and ans[1] != 2 and ans[2] != 3 and ans[3] != 4 and ans[4] != 5 and ans[5] != 6 and ans[6] != 7 and ans[7] != 8 and ans[8] != 9:  # focus
-        print('****************************Game Draw****************************') # focus
+        print('***************************Game Draw***************************') # focus
         won = True
+
     if won == True :
         table()
 
     return won  # O
 
 def space_exist():
-    return ans.count('X') != 9  # O
+    return ans.count('X') != 5  # O
 
 i = 1
 while space_exist():
 
-    # print('round :',i) # focus
-    botMove()# focus
+    print('round :',i) # focus
     table()
     value = input("Please enter a number : ")  # bun
+
     if int(value) >=10:# bun
         print('------Try again------')# bun
         continue# bun
     elif int(value) == 0:# bun
         print('------Try again------')# bun
         continue# bun
-    value = humanMove(value)  # O
-
-    i = i+1
-    won = win()  # O
+    elif int(value) == 5:# bun
+        print('------Try again------')# bun
+        continue# bun
+    else: #focus
+        value = humanMove(value)  # O
+        won = win()  # O
+        botMove()  # focus
+        won = win()
+        i = i+1
 
     if won == True:  # O
         break  # O
