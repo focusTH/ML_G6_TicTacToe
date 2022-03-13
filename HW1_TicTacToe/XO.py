@@ -1,7 +1,7 @@
 import random
 # W0 = random.randint(-100,100)
 # W1 = random.randint(-100,100)
-ans = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ans = [1, 2, 3, 4, 'O', 6, 7, 8, 9]
 print(' **************************** GAME START ****************************')  # game
 def table(): # game focus
     print('                          [',ans[0],']','[',ans[1],']','[',ans[2],']',)  # game
@@ -163,47 +163,47 @@ def botMove():  # FOCUS ,game
             Vs = Vb
             value = 4
 
-    if ans[4] == 5:
-        A = 0
-        B = 0
-        C = 0
-        # cheak A
-        if ans[0] == 'X':
-            A = A + 1
-        if ans[1] == 'X':
-            A = A + 1
-        if ans[2] == 'X':
-            A = A + 1
-        if ans[3] == 'X':
-            A = A + 1
-        if ans[4] == 'X':
-            A = A + 1
-        if ans[5] == 'X':
-            A = A + 1
-        if ans[6] == 'X':
-            A = A + 1
-        if ans[7] == 'X':
-            A = A + 1
-        if ans[8] == 'X':
-            A = A + 1
-
-        # cheak B
-        if ans[1] == 'O':
-            B = B + 1
-        if ans[3] == 'O':
-            B = B + 1
-        if ans[5] == 'O':
-            B = B + 1
-        if ans[7] == 'O':
-            B = B + 1
-        # cheak C
-        C = C + 2
-
-        Vb = A + B + C
-
-        if Vb > Vs:
-            Vs = Vb
-            value = 5
+    # if ans[4] == 5:
+    #     A = 0
+    #     B = 0
+    #     C = 0
+    #     # cheak A
+    #     if ans[0] == 'X':
+    #         A = A + 1
+    #     if ans[1] == 'X':
+    #         A = A + 1
+    #     if ans[2] == 'X':
+    #         A = A + 1
+    #     if ans[3] == 'X':
+    #         A = A + 1
+    #     if ans[4] == 'X':
+    #         A = A + 1
+    #     if ans[5] == 'X':
+    #         A = A + 1
+    #     if ans[6] == 'X':
+    #         A = A + 1
+    #     if ans[7] == 'X':
+    #         A = A + 1
+    #     if ans[8] == 'X':
+    #         A = A + 1
+    #
+    #     # cheak B
+    #     if ans[1] == 'O':
+    #         B = B + 1
+    #     if ans[3] == 'O':
+    #         B = B + 1
+    #     if ans[5] == 'O':
+    #         B = B + 1
+    #     if ans[7] == 'O':
+    #         B = B + 1
+    #     # cheak C
+    #     C = C + 2
+    #
+    #     Vb = A + B + C
+    #
+    #     if Vb > Vs:
+    #         Vs = Vb
+    #         value = 5
 
     if ans[5] == 6:
         A = 0
@@ -423,12 +423,8 @@ def space_exist():
 i = 1
 while space_exist():
 
-    # print('round :',i) # focus
-    botMove()
+    print('round :',i) # focus
     table()
-    won = win()
-    if won == True:  # O
-        break  # O
     value = input("Please enter a number : ")  # bun
 
     if int(value) >=10:# bun
@@ -442,11 +438,13 @@ while space_exist():
         continue# bun
     else: #focus
         value = humanMove(value)  # O
-          # O
-         # focus
-        i = i + 1
+        won = win()  # O
+        botMove()  # focus
+        won = win()
+        i = i+1
 
-
+    if won == True:  # O
+        break  # O
 
 # print(f'You entered {value}')
 
