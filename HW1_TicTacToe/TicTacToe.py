@@ -7,12 +7,10 @@ W1 = random.randint(-100, 100)
 W2 = random.randint(-100, 100)
 W3 = random.randint(-100, 100)
 
-
 def table():  # game focus
     print('                          [', ans[0], ']', '[', ans[1], ']', '[', ans[2], ']', )  # game
     print('                          [', ans[3], ']', '[', ans[4], ']', '[', ans[5], ']', )  # focus
     print('                          [', ans[6], ']', '[', ans[7], ']', '[', ans[8], ']', )  # focus
-
 
 def humanMove(value):  # focus
     if value == 1:
@@ -34,7 +32,6 @@ def humanMove(value):  # focus
     elif value == 9:
         ans[8] = "X"  # focus
     return ans
-
 
 def win():
     won = False  # O
@@ -61,10 +58,8 @@ def win():
 
     return won  # O
 
-
 def space_exist():
     return ans.count('X') != 5  # O
-
 
 while True:
 
@@ -317,6 +312,7 @@ while True:
                     f1 = A
                     f2 = 2 * B
                     f3 = C
+
             if ans[6] == 7:
                 A = 0
                 B = 0
@@ -353,6 +349,7 @@ while True:
                     f1 = A
                     f2 = 2 * B
                     f3 = C
+
             if ans[7] == 8:
                 A = 0
                 B = 0
@@ -389,6 +386,7 @@ while True:
                     f1 = A
                     f2 = 2 * B
                     f3 = C
+
             if ans[8] == 9:
                 A = 0
                 B = 0
@@ -479,5 +477,3 @@ while True:
             print('W0-3', W0, W1, W2, W3)
     else:
         break
-
-# print(f'You entered {value}')
