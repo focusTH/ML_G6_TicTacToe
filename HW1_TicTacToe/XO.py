@@ -433,7 +433,7 @@ while space_exist():
     elif int(value) == 0:# bun
         print('------Try again------')# bun
         continue# bun
-    elif int(value) == 5:# bun
+    elif int(value) == 5:# bun , focus
         print('------Try again------')# bun
         continue# bun
     else: #focus
