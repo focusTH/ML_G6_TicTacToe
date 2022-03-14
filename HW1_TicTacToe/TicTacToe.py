@@ -114,13 +114,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[0] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 1
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[1] == 2:
@@ -150,13 +150,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[1] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 2
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
             if ans[2] == 3:
                 A = 0
@@ -186,13 +186,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[2] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 3
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
             if ans[3] == 4:
                 A = 0
@@ -222,13 +222,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[3] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 4
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[4] == 5:
@@ -267,13 +267,13 @@ while True:
                 # cheak C
                 C = C + 2
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[4] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 5
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[5] == 6:
@@ -304,13 +304,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[5] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 6
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[6] == 7:
@@ -341,13 +341,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[6] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 7
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[7] == 8:
@@ -378,13 +378,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[7] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 8
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if ans[8] == 9:
@@ -415,13 +415,13 @@ while True:
                 # cheak C
                 C = C + 1
 
-                Vb = W0 + W1 * A + W2 * 2 * B + W3 * C
+                Vb = W0 + W1 * A + W2 * 1.5 * B + W3 * C
                 print('ans[8] Vb =', Vb)
                 if Vb > Vs:
                     Vs = Vb
                     value = 9
                     f1 = A
-                    f2 = 2 * B
+                    f2 = 1.5 * B
                     f3 = C
 
             if value == 1:
