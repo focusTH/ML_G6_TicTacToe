@@ -2,10 +2,14 @@ import random
 from matplotlib.pyplot import table
 import numpy as np
 
-W0 = random.randint(-100, 100)
-W1 = random.randint(-100, 100)
-W2 = random.randint(-100, 100)
-W3 = random.randint(-100, 100)
+# W0 = random.randint(-100, 100)
+# W1 = random.randint(-100, 100)
+# W2 = random.randint(-100, 100)
+# W3 = random.randint(-100, 100)
+W0 =10
+W1 =10
+W2 =10
+W3 =10
 
 def table():  # game focus
     print('                          [', ans[0], ']', '[', ans[1], ']', '[', ans[2], ']', )  # game
@@ -473,6 +477,9 @@ while True:
                 ans1 = int(input("Please enter a number : "))
 
             value = humanMove(ans1)  # O
+            won = win()
+            if won == True:  # O
+                break  # O
             i = i + 1
             print('W0-3', W0, W1, W2, W3)
     else:
