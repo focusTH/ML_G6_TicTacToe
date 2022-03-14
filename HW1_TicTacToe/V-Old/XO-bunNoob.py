@@ -15,31 +15,25 @@ def table(): # game focus
     print('                          [',ans[3],']','[',ans[4],']','[',ans[5],']',)  # focus
     print('                          [',ans[6],']','[',ans[7],']','[',ans[8],']',)   # focus
 
-def humanMove(): #focus
-    value = input("Please enter a number : ")  # bun
-    if int(value) >=10:# bun
-        print('------Try again------')# bun
-        # continue# bun
-    elif int(value) == 0:# bun
-        print('------Try again------')# bun
-        # continue# bun 
-    elif value == "1":
+def humanMove(value): #focus
+   
+    if value == 1:
         ans[0] = "X"  # focus
-    elif value == "2":
+    elif value == 2:
         ans[1] = "X"  # focus
-    elif value == "3":
+    elif value == 3:
         ans[2] = "X"  # focus
-    elif value == "4":
+    elif value == 4:
         ans[3] = "X"  # focus
-    elif value == "5":
+    elif value == 5:
         ans[4] = "X"  # focus
-    elif value == "6":
+    elif value == 6:
         ans[5] = "X"  # focus
-    elif value == "7":
+    elif value == 7:
        ans[6] = "X"  # focus
-    elif value == "8":
+    elif value == 8:
         ans[7] = "X"  # focus
-    elif value == "9":
+    elif value == 9:
         ans[8] = "X"  # focus
     return ans   
 
@@ -95,10 +89,7 @@ while True:
 
             value1 = []
             if i == 1:
-                # W0 = random.randint(-100, 100)
-                # W1 = random.randint(-100, 100)
-                # W2 = random.randint(-100, 100)
-                # W3 = random.randint(-100, 100)
+              
                 Vs = -1000
             else:
                 Vt = Vs
@@ -498,19 +489,14 @@ while True:
             won = win()
             if won == True:  # O
                 break  # O
-            value = input("Please enter a number : ")  # bun
-            if int(value) >=10:# bun
-                print('------Try again------')# bun
-                continue# bun
-            elif int(value) == 0:# bun
-                print('------Try again------')# bun
-                continue# bun
-            value = humanMove(value)  # O
+            ans1 = 0
+            while ans1 != 1 and ans1 != 2 and ans1 != 3 and ans1 != 4 and ans1 != 5 and ans1 != 6 and ans1 != 7 and ans1 != 8 and ans1 != 9:
+                ans1 = int(input("Please enter a number : "))
+
+            value = humanMove(ans1)  # O
             i = i+1
             print('W0-3',W0,W1,W2,W3)
     else:
         break
 
-
-# print(f'You entered {value}')
 
