@@ -1,2 +1,2 @@
-# ML_G6
-Machine Learning Group6 Term 3.2
+# ML_G6_Term3.2
+Machine Learning Group6
