@@ -2,13 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 def knn(x, X, Y, k=1):
-    a = np.sum((X - x) ** 2, axis=1).argmin()
-    idx = np.argsort(a)
-    print('idx',idx)
-
     return Y[np.sum((X - x) ** 2, axis=1).argmin()]
 
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
@@ -30,12 +24,4 @@ for x, y in zip(Xtest, Ytest):
     z = knn(x, Xtrain, Ytrain)
     if z == y:
         correct += 1
-
-
-k = range(1,len(Xtrain))
-print('K :',k)
-for i in k :
-    z = knn(Xtest, Xtrain, Ytrain,k)
-
 print(f'accuracy rate: {correct/len(Xtest)*100:.2f}')
-
