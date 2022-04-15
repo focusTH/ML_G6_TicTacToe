@@ -21,7 +21,18 @@ choice = input("\nโปรดเลือก set ของข้อมูลท
 
 if choice == '1':
   print("เฉพาะเพศ")
+  sex = x['sex']
+  arr_sex = []
+  for i in range(sex.size):
 
+    arr_sex.append(sex[i, 0][0])
+    # print(i)
+  # print(sex.size)
+  # print(sex[0,0])
+  print(arr_sex)
+  print("ช :", arr_sex.count('ช'))
+  print("ญ :", arr_sex.count('ญ'))
+  print("ช+ญ :", arr_sex.count('ญ') + arr_sex.count('ช'))
 
 
 elif choice == '2':
@@ -35,6 +46,7 @@ elif choice == '2':
     if arrAll[x] not in arrRep:
       arrRep.append(arrAll[x])
       numRep = numRep + 1
+  print(arrAll)
 
   for x in range(numRep):
     arrNum.append(arrAll.count(arrRep[x]))
@@ -53,7 +65,7 @@ elif choice == '3':
   for x in range(depLen):
     c = dep[x,0][0],sex[x,0][0]
     arrAll.append(c)
-  # print(arrAll)
+  print(arrAll)
 
   for x in range(depLen):
     if arrAll[x] not in arrRep:
