@@ -142,10 +142,11 @@ for p in range(19) :
     while i_gen < n_gen:
 
         if p>16 :
-            r = p-2
+            r=p-2
+         
         else : r = p
 
-        x = int(arrNumb[r] / 2)
+        x =int(arrNumb[r] / 2)
         x_ = int(arrNumb[r] / 2)
         y = int(arrNumg[p] / 2)
         y_ = int(arrNumg[p] / 2)
@@ -191,6 +192,9 @@ for p in range(19) :
             print("boy:", x1, x_, " girl:", y1, y_)
             break
 
-
+print("color 1 Boy",color1sex.count('ชาย'))
+print("color 1 Gril",color1sex.count('หญิง'))
+print("color 2 Boy",color2sex.count('ชาย'))
+print("color 2 Gril",color2sex.count('หญิง'))
 # else:
 #   print("End Program")
