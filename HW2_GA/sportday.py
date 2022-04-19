@@ -103,7 +103,7 @@ x = int(arrNumb[0]/2)
 x_ = int(arrNumb[0]/2)
 y = int(arrNumg[0]/2)
 y_ = int(arrNumg[0]/2)
-print("boy:",x,x_," girl:",y,y_)
+# print("boy:",x,x_," girl:",y,y_)
 
 # [1, 2, -3, 0, 1, 1]
 # plt.plot(x, y, '.')
@@ -128,57 +128,68 @@ def mutate(p1):
     c1 = p1.copy()
     c1[xp] += np.random.randn()
     return c1
-
+color1sex = []
+color2sex = []
+arrPerson =[]
 degree = 5
 n_pop = 100
 n_sel = 50
 P = np.random.randn(n_pop, degree)
 n_gen = 1e4
 i_gen = 0
-while i_gen < n_gen:
-    i_gen += 1
-    # Selection
-    F = fitness(P, x, y)
-    i = np.argsort(F)
-    P = P[i]
-    print(f'fitness = {F[i[0]]}')
-    plt.clf()
-    plt.plot(x, y, '.')  # problem
-    plt.plot(x_, y_, 'r')  # solution
-    z = np.polyval(P[0], x_)
-    plt.plot(x_, z, 'g')  # GA
-    plt.show(block=False)
-    plt.pause(0.1)
-    # Reproduction
-    # Sexual
-    for j in range(n_sel, n_pop, 2):
-        p1p2 = np.random.permutation(n_sel)[:2]
-        P[j], P[j+1] = xover(P[p1p2[0]], P[p1p2[1]])
-    # Asexual
-    for j in range(n_sel, n_pop):
-        if np.random.rand() > 0.8:
-            P[j] = mutate(P[np.random.randint(n_sel)])
+for p in range(19) :
+    print(p)
+    while i_gen < n_gen:
 
-    color1 = []
-    color2 = []
-    if F[i[0]]<=1:
-        x1 = arrNumb[0]-x
-        y1 = arrNumg[0]-y
-        for x in range(x1):
-            xx = 'ชาย',dep[0,0][0]
-            color1.append(xx)
-        for x in range(y1):
-            color1.append('หญิง')
-        for x in range(x):
-            color2.append('ชาย')
-        for x in range(y):
-            color2.append('หญิง')
+        if p>16 :
+            r = p-2
+        else : r = p
 
-        print('color1 : ',color1,'\ncolor2 : ',color2)
+        x = int(arrNumb[r] / 2)
+        x_ = int(arrNumb[r] / 2)
+        y = int(arrNumg[p] / 2)
+        y_ = int(arrNumg[p] / 2)
+        i_gen += 1
+        # Selection
+        F = fitness(P, x, y)
+        i = np.argsort(F)
+        P = P[i]
+        print(f'fitness = {F[i[0]]}')
+        plt.clf()
+        plt.plot(x, y, '.')  # problem
+        plt.plot(x_, y_, 'r')  # solution
+        z = np.polyval(P[0], x_)
+        plt.plot(x_, z, 'g')  # GA
+        plt.show(block=False)
+        plt.pause(0.1)
+        # Reproduction
+        # Sexual
+        for j in range(n_sel, n_pop, 2):
+            p1p2 = np.random.permutation(n_sel)[:2]
+            P[j], P[j+1] = xover(P[p1p2[0]], P[p1p2[1]])
+        # Asexual
+        for j in range(n_sel, n_pop):
+            if np.random.rand() > 0.8:
+                P[j] = mutate(P[np.random.randint(n_sel)])
 
 
-        print("boy:", x1, x_, " girl:", y1, y_)
-        break
+        if F[i[0]]<=1:
+            x1 = arrNumb[r]-x
+            y1 = arrNumg[p]-y
+            for x in range(x1):
+                color1sex.append('ชาย')
+            for x in range(y1):
+                color1sex.append('หญิง')
+            for x in range(x):
+                color2sex.append('ชาย')
+            for x in range(y):
+                color2sex.append('หญิง')
+
+            print('color1 : ',color1sex,'\ncolor2 : ',color2sex)
+
+
+            print("boy:", x1, x_, " girl:", y1, y_)
+            break
 
 
 # else:
